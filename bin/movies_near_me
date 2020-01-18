@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "Hello World! this is another test " 
+require './lib/movies_cli/moviesCli.rb'
+
+MoviesCli.new.run
