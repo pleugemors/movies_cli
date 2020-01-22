@@ -16,4 +16,5 @@ Theater class
     Keeps information about all theaters in @@all variable
     theater instance variables : @movies -> array of movies showing at the theater
     methods list movies -> list all movies playing
+    print all-> prints all theaters that was scraped from the address
 
