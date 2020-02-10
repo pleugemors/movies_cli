@@ -4,7 +4,7 @@ class MoviesCli
     def run
         puts "Enter your zip code to find out the movies that are running near you: "
         zip = gets.strip
-        MoviesScraper.new(zip)
+        theathers = MoviesScraper.new(zip).collect
         #scrape data
         #list theaters
             puts "Finding theaters in zipcode #{zip}: "
@@ -21,6 +21,7 @@ class MoviesCli
         end
         
     end
+    
 
 
 end

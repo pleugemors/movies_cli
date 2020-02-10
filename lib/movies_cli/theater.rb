@@ -1,6 +1,6 @@
 class Theater
 
-    attr_accessor :name, :address, movies
+    attr_accessor :name, :address, :movies
     @@all = []
 
     def initialize(name, address)
