@@ -1,9 +1,6 @@
-Hello world
 # MoviesCli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/movies_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is a simple cli that allows the programmer to venture into scraping the internet and manipulating the scraped data into object programming.  This particular gem scrapes a movie time website imdb and pulling theater information with the movies that they are playing and their times.
 
 ## Installation
 
@@ -23,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+run either ./bin/movies_near_me or ruby ./bin/movies_near_me and it will prompt you to put in a zip code.  Enter in a zipcode and press enter.  A list of theaters will appear with a prompt of which theater would you like to get movies playing from.  Enter the number corresponding to the theater and a list of movies will pop up.  Select another movie to find out the times the movie is playing.  After this is done it will ask if you would like to try another zip code.  A "Y", "y", "yes", or "YES" will start you from the beginning.
 
 ## Development
 

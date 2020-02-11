@@ -8,7 +8,7 @@ class MoviesCli
             MoviesScraper.new(zip).collect
             printTheaters(zip)
             #binding.pry
-            choice = gets.chomp
+            choice = getChoice(Theater.all)
             theater = Theater.all[choice.to_i-1]
             printMovies(choice)
             chooseMovie(theater)
@@ -35,7 +35,7 @@ class MoviesCli
 
     def chooseMovie(theater)
         puts "Which movie would you like to see times for?"
-        item = gets.chomp.to_i-1
+        item = getChoice(theater.movies)
         theater.movies[item].print
     end
 
@@ -48,5 +48,14 @@ class MoviesCli
         else
             false
         end
+    end
+
+    def getChoice(array)
+        choice = gets.chomp.to_i-1
+        while choice < 0 || choice > array.size - 1 do
+            puts "Invalid choice.  Please choose a number from 1 to #{array.size}"
+            choice = gets.chomp.to_i-1
+        end
+        choice 
     end
 end
