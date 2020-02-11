@@ -13,8 +13,9 @@ class Movie
 
     def print
         puts self.name
-        temp = @times.join(" , ")    
-        puts temp
+        @times.each do |time|
+           puts time 
+        end
     end
 
 end
