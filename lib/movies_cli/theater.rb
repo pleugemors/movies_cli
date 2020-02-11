@@ -1,6 +1,5 @@
 class Theater
-
-    attr_accessor :name, :address, :movies
+    attr_reader :name, :address, :movies
     @@all = []
 
     def initialize(name, address)
@@ -31,7 +30,10 @@ class Theater
             raise RunTimeError, "it can only add movies"
         else
             @movies << movie_instance
-        end
-            
+        end            
+    end
+
+    def self.clear
+        @@all.clear 
     end
 end
