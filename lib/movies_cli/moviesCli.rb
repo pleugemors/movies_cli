@@ -9,7 +9,7 @@ class MoviesCli
             printTheaters(zip)
             #binding.pry
             choice = getChoice(Theater.all)
-            theater = Theater.all[choice.to_i-1]
+            theater = Theater.all[choice]
             printMovies(choice)
             chooseMovie(theater)
             running = wantCont
@@ -29,8 +29,8 @@ class MoviesCli
 
     def printMovies(index)
         temp = Theater.all
-        puts temp[index.to_i-1].name
-        temp[index.to_i-1].print_movies
+        puts temp[index].name
+        temp[index].print_movies
     end
 
     def chooseMovie(theater)

@@ -47,7 +47,9 @@ class MoviesScraper
             if !times.nil?
                 times.each do |time|
                     #showtimes a[target] included Get Tickets if there was also a IMAX portion with the movie
-                    if time.text.strip != "Get Tickets"
+                    if time.text.strip == "Get Tickets"
+                        temp.add_time("IMAX times: ")
+                    else
                         temp.add_time(time.text.strip)
                     end
                 end
