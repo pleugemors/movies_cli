@@ -1,6 +1,5 @@
 require "nokogiri"
 require "open-uri"
-require "pry"
 require_relative "theater"
 require_relative "movie"
 class MoviesScraper
@@ -34,7 +33,6 @@ class MoviesScraper
             end
             temp = Theater.new(name, addr)
             movies = theater.css("div.info")
-            #binding.pry
             getMovies(temp, movies)
         end
     end
