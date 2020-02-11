@@ -29,13 +29,14 @@ class MoviesCli
 
     def printMovies(index)
         temp = Theater.all
-        puts temp[index].name
+        puts temp[index].print_theater
         temp[index].print_movies
     end
 
     def chooseMovie(theater)
         puts "Which movie would you like to see times for?"
         item = getChoice(theater.movies)
+        theater.print_theater
         theater.movies[item].print
     end
 

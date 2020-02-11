@@ -36,4 +36,8 @@ class Theater
     def self.clear
         @@all.clear 
     end
+
+    def print_theater
+        puts self.name + " " + self.address
+    end
 end
