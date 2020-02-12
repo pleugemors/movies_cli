@@ -7,7 +7,6 @@ class MoviesCli
             zip = getZip
             MoviesScraper.new(zip).collect
             printTheaters(zip)
-            #binding.pry
             choice = getChoice(Theater.all)
             theater = Theater.all[choice]
             printMovies(choice)

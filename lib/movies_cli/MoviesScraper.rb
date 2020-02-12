@@ -2,14 +2,9 @@ require "nokogiri"
 require "open-uri"
 require_relative "theater"
 require_relative "movie"
+
 class MoviesScraper
-
-    @@all = []
- 
-    def self.all
-        @@all 
-    end
-
+    
     def initialize(zipcode)
         @url = "https://www.imdb.com/showtimes/US/" + zipcode 
     end
@@ -32,6 +27,7 @@ class MoviesScraper
                 addr += element.text.strip + " "
             end
             temp = Theater.new(name, addr)
+            #insert movies and movie times for this 1 theater
             movies = theater.css("div.info")
             getMovies(temp, movies)
         end
